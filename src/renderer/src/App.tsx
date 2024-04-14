@@ -1,8 +1,17 @@
+import { ActionButtonsRow, Content, DraggableTopBar, RootLayout, Sidebar } from '@/components'
+
 function App() {
   return (
-    <div>
-      <h1 className="text-blue-500">Hello from Electron</h1>
-    </div>
+    <>
+      <DraggableTopBar />
+      <RootLayout>
+        <Sidebar className="p-2">
+          <ActionButtonsRow className="flex justify-between mt-1" />
+        </Sidebar>
+
+        <Content className="border-l bg-zinc-900/50 border-l-white/20">Content</Content>
+      </RootLayout>
+    </>
   )
 }
 
